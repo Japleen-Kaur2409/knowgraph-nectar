@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import KnowledgeGraphWrapper from "@/components/KnowledgeGraphWrapper";
 import InputSection from "@/components/InputSection";
 import EducationalQuotes from "@/components/EducationalQuotes";
@@ -7,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Presentation } from "lucide-react";
 
 const Index = () => {
   const handleProcessContent = (content: string) => {
@@ -36,6 +38,12 @@ const Index = () => {
                 <Button size="lg" variant="outline">
                   Learn More
                 </Button>
+                <Link to="/presentation">
+                  <Button size="lg" variant="outline" className="flex items-center gap-2">
+                    <Presentation className="h-4 w-4" />
+                    Hackathon Presentation
+                  </Button>
+                </Link>
               </div>
             </div>
 

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Files from "./pages/Files";
 import AboutUs from "./pages/AboutUs";
 import NotFound from "./pages/NotFound";
+import HackathonPresentation from "./components/HackathonPresentation";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/files" element={<Files />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/presentation" element={<HackathonPresentation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
