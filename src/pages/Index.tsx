@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import KnowledgeGraphWrapper from "@/components/KnowledgeGraphWrapper";
 import InputSection from "@/components/InputSection";
@@ -8,6 +9,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const Index = () => {
+  const handleProcessContent = (content: string) => {
+    // Handle the processed content
+    console.log("Processing content:", content);
+    // Here you would typically update state or send to an API
+  };
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,7 +40,7 @@ const Index = () => {
             </div>
 
             <div className="mt-12 bg-white rounded-xl shadow-lg p-6">
-              <InputSection />
+              <InputSection onProcessContent={handleProcessContent} />
               <div className="mt-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Interactive Knowledge Graph</h2>
                 <p className="text-gray-600 mb-6">
@@ -46,7 +52,7 @@ const Index = () => {
           </div>
         </section>
 
-        <EducationalQuotes />
+        <EducationalQuotes isVisible={true} />
         <Testimonials />
       </main>
 

@@ -1,6 +1,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
-import ReactFlow, {
+import {
+  ReactFlow,
   Controls,
   Background,
   MiniMap,
@@ -14,6 +15,7 @@ import ReactFlow, {
   NodeProps,
   NodeChange,
   EdgeChange,
+  MarkerType,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
@@ -92,6 +94,9 @@ const EnhancedKnowledgeGraph = ({ nodes = defaultNodes, connections = defaultCon
       label: connection.label,
       animated: false,
       style: { stroke: '#888' },
+      markerEnd: {
+        type: MarkerType.ArrowClosed,
+      },
     })),
     [connections]
   );
