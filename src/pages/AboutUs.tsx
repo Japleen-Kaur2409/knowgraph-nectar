@@ -1,5 +1,4 @@
-
-import { GitHub, Linkedin, Mail, ExternalLink, BookOpen, Users, LineChart, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, BookOpen, Users, LineChart, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -205,7 +204,7 @@ const AboutUs = () => {
                           rel="noopener noreferrer"
                           className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors"
                         >
-                          <GitHub className="h-5 w-5" />
+                          <Github className="h-5 w-5" />
                         </a>
                         <a 
                           href={member.links.linkedin}
