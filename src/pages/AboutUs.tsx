@@ -1,44 +1,9 @@
+
 import { Github, Linkedin, Mail, ExternalLink, BookOpen, Users, LineChart, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const AboutUs = () => {
-  const teamMembers = [
-    {
-      name: "Alex Chen",
-      role: "Co-Founder & ML Engineer",
-      bio: "Computer Science graduate from University of Toronto with a focus on machine learning. Alex developed the core algorithm that powers NoteNet's knowledge graph generation.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      links: {
-        github: "https://github.com/alexchen",
-        linkedin: "https://linkedin.com/in/alexchen",
-        email: "alex@notenet.io"
-      }
-    },
-    {
-      name: "Priya Sharma",
-      role: "Co-Founder & UX Designer",
-      bio: "Human-Computer Interaction specialist from University of Toronto. Priya ensures that NoteNet is intuitive, accessible, and delivers a seamless user experience across all platforms.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      links: {
-        github: "https://github.com/priyasharma",
-        linkedin: "https://linkedin.com/in/priyasharma",
-        email: "priya@notenet.io"
-      }
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Co-Founder & Backend Developer",
-      bio: "Full-stack developer with a passion for education technology. Michael built the infrastructure that allows NoteNet to efficiently process and store different types of content.",
-      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      links: {
-        github: "https://github.com/michaelrodriguez",
-        linkedin: "https://linkedin.com/in/michaelrodriguez",
-        email: "michael@notenet.io"
-      }
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -173,57 +138,6 @@ const AboutUs = () => {
                     We're particularly proud of our work with accessibility-focused organizations, where NoteNet has helped learners with different learning styles visualize information in ways that make sense to them.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Meet the Team Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Meet Our Team</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {teamMembers.map((member, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover-card">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                      <p className="text-netblue-600 text-sm mb-3">{member.role}</p>
-                      <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                      
-                      <div className="flex space-x-3">
-                        <a 
-                          href={member.links.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors"
-                        >
-                          <Github className="h-5 w-5" />
-                        </a>
-                        <a 
-                          href={member.links.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-full transition-colors"
-                        >
-                          <Linkedin className="h-5 w-5" />
-                        </a>
-                        <a 
-                          href={`mailto:${member.links.email}`}
-                          className="p-2 text-red-600 hover:text-red-700 hover:bg-red-50 rounded-full transition-colors"
-                        >
-                          <Mail className="h-5 w-5" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

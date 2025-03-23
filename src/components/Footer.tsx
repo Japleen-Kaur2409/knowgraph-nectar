@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Mail, PhoneCall, ExternalLink, Github } from 'lucide-react';
+import { Mail, PhoneCall } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
@@ -49,48 +49,6 @@ const Footer = () => {
                 <PhoneCall className="h-5 w-5 text-netblue-500 mr-2 mt-0.5" />
                 <a href="tel:+1234567890" className="text-gray-600 hover:text-netblue-600 transition-colors text-sm">
                   (123) 456-7890
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://www.utoronto.ca/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-600 hover:text-netblue-600 transition-colors text-sm"
-                >
-                  <ExternalLink className="h-4 w-4 mr-1" />
-                  University of Toronto
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/notenet/knowledge-graph"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-600 hover:text-netblue-600 transition-colors text-sm"
-                >
-                  <Github className="h-4 w-4 mr-1" />
-                  GitHub Repository
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://devpost.com/software/notenet"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-600 hover:text-netblue-600 transition-colors text-sm"
-                >
-                  <ExternalLink className="h-4 w-4 mr-1" />
-                  Hackathon Project
                 </a>
               </li>
             </ul>
